@@ -120,5 +120,5 @@ String value = i.getStringExtra(key);
 ```
 <activity android:name ".xxx" 
 		  android:label="xxxxx"
-		  adnroid:parentActivityName".NaminActivity"/>
+		  adnroid:parentActivityName".MainActivity"/>
 ```
