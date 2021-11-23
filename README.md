@@ -16,7 +16,7 @@
 * new project -> empty activity -> name -> package name -> langauge = java -> finish 
 
 ### Ide settings 
-* preferences -> editor -> generatl -> chagen gont size (zoom) with cmd|mounse wheel
+* preferences -> editor -> generatl -> change font size (zoom) with cmd|mounse wheel
 * preferences -> editor ->genral -> autoimport -> dropdown insert import for all 
 
 ### Adding emulator on the ide 
