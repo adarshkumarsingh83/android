@@ -53,7 +53,7 @@ app
 
 
 ### Activity 
-* pages on phone
+* pages on the app 
 
 ### Main Actitity 
 * home page on the app 
@@ -82,7 +82,6 @@ String value = i.getStringExtra(key);
 * EditVeiw 
 * TexttView 
 * Button 
-* 
 
 ### To get the Component by its id 
 * R.id.[id_name]
@@ -120,5 +119,5 @@ String value = i.getStringExtra(key);
 ```
 <activity android:name ".xxx" 
 		  android:label="xxxxx"
-		  adnroid:parentActivityName".MainActivity"/>
+		  adnroid:parentActivityName".ParentActivity"/>
 ```
