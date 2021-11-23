@@ -34,7 +34,7 @@ name -> orientation -> finish
 ```
 app
 |-> manifests  
-|     |->  
+|     |->  AndroidManifest.xml  // for adding permission for the the operatioss for the uses 
 |-> java 
 |     |-> all java files MainActivity File and test files   
 |-> java(generated)
