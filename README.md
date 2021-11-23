@@ -17,6 +17,7 @@
 
 ### Ide settings 
 * preferences -> editor -> generatl -> chagen gont size (zoom) with cmd|mounse wheel
+* preferences -> editor ->genral -> autoimport -> dropdown insert import for all 
 
 ### Adding emulator on the ide 
 * Open Dvd Manager -> create virutal device -> select the type of phone and the -> next -> system image (android os version) -> download -> finish 
@@ -34,13 +35,17 @@ name -> orientation -> finish
 ```
 app
 |-> manifests  
+|     |
 |     |->  AndroidManifest.xml  // for adding permission for the the operatioss for the uses 
+|                               // change the main activity to something else activity for app 
+|                               // change the label of the app 
 |-> java 
 |     |-> all java files MainActivity File and test files   
 |-> java(generated)
 |-> res
 |     |-> activity_xx.xml  // all the xml resources for the layouts 
-|     |-> values           // configration for key value pair for ui  
+|     |-> values           
+|           |-> strings.xml // configration for key value pair for ui  
 |-> res(generated)
 |-> Gradle scripts 
 |     |->  build.gradle    // for the importing lib 
@@ -53,5 +58,67 @@ app
 ### Main Actitity 
 * home page on the app 
 
-### Intent 
+### android.content.Intent Class 
 * sharing data between Activity using Intent 
+
+* source Activity 
+```
+Intent i = new Intent(context,SubActivityName.class);
+i.putxtras("key","value");
+istartActivitty(i);
+```
+
+* Destination Activity 
+```
+Intent i = getINtent();
+String value = i.getStringExtra(key);
+```
+
+### for Log 
+* Import android.util.lOg
+* Log.d(tag="xx",msg="xxx")
+
+### android.view.View Class 
+* EditVeiw 
+* TexttView 
+* Button 
+* 
+
+### To get the Component by its id 
+* R.id.[id_name]
+* findViewById(R.id.[id_name]) 
+
+### Toast 
+* Toast.makeText(content,msg,Toast.LENGHT_LONG).show()
+* this / ClassName.this
+
+### Creating Child Acttivity 
+* select the java package and right click on that 
+* new -> Activity -> Empty Activity -> name -> package type -> langauge = java -> finish 
+
+
+### How to Change the Main Activity 
+* AndroidManifest.xml 
+```
+<activity android:name ".xxx" 
+		  android:label="xxxxx">
+          <activity android:name ".xxx" 
+		            android:label="xxxxx">
+                     // ADD THE BELOW INENT-FILE TAG TO ANY ACTIVITY AND MAKE IT MAIN ACTIVITY 
+                      <intent-filter>
+                          <action android:name="android.intent.action.MAIN"/>
+                          <action android:name="android.intent.category.LAUNCHER"/>
+                      </intent-filter>	
+
+		  </activity >	
+</activity >		  
+```
+
+
+### Creating a navigation for activity 
+* AndroidManifest.xml 
+```
+<activity android:name ".xxx" 
+		  android:label="xxxxx"
+		  adnroid:parentActivityName".NaminActivity"/>
+```
