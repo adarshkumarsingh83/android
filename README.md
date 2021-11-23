@@ -77,6 +77,15 @@ String value = i.getStringExtra(key);
 ### for Log 
 * Import android.util.lOg
 * Log.d(tag="xx",msg="xxx")
+* View > Tool Windows > Logcat
+
+```
+	Log.e(String, String) (error)
+	Log.w(String, String) (warning)
+	Log.i(String, String) (information)
+	Log.d(String, String) (debug)
+	Log.v(String, String) (verbose)
+```
 
 ### android.view.View Class 
 * EditVeiw 
@@ -120,4 +129,15 @@ String value = i.getStringExtra(key);
 <activity android:name ".xxx" 
 		  android:label="xxxxx"
 		  adnroid:parentActivityName".ParentActivity"/>
+```
+
+### Providing permission  
+* AndroidManifest.xml 
+```
+<manifest ...>
+    <uses-permission android:name="android.permission.XXXX"/>
+    <application ...>
+        ...
+    </application>
+</manifest>
 ```
